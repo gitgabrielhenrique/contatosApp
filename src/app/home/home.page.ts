@@ -1,4 +1,4 @@
-import { Contato } from './../interfaces/contato';
+
 import { Component } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 import{Router} from '@angular/router'
@@ -57,11 +57,12 @@ export class HomePage {
       ]
 
 
-      constructor(private router: Router,public dadosSevice: DadoscontatoService) {}
+      constructor(public router: Router,public dadosSevice: DadoscontatoService) {}
 
 salvarContato(contato:Contato){
   this.dadosSevice.salvardados('contato',contato)
   this.router.navigateByUrl('contato')
+  console.log(contato)
 
 }
 

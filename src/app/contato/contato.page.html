@@ -10,4 +10,34 @@
       <ion-title size="large">contato</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-card>
+
+  <ion-item>
+    <img [src]="contato?.foto">
+  </ion-item>
+<ion-card-title>
+
+  {{contato?.nome}}
+
+</ion-card-title>
+
+<ion-card-subtitle>
+  email:
+  {{contato?.email}}
+  <br>
+telefone:
+  {{contato?.telefone}}
+
+
+
+</ion-card-subtitle>
+
+
+</ion-card>
+
+<ion-button (click)="caminho('../home')" >
+  voltar
+</ion-button>
+
 </ion-content>
+
